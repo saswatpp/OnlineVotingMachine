@@ -1,6 +1,7 @@
 # OnlineVotingMachine
-##Idea:
-Online Voting using WebApp
+A user-friendly webapp to make voting hassle-free and secured using blockchain technology.
+
+#Idea:
 The Following features will be included in our Ethereum Blockchain Voting system
 
 1. Votes can be given through any browser supporting Ethereum Client like metamask
