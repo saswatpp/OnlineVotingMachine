@@ -1,7 +1,7 @@
 # OnlineVotingMachine
 A user-friendly webapp to make voting hassle-free and secured using blockchain technology.
 
-#Idea:
+# Idea:
 The Following features will be included in our Ethereum Blockchain Voting system
 
 1. Votes can be given through any browser supporting Ethereum Client like metamask
@@ -17,7 +17,7 @@ The Election will have the following 3 major Process:
 2. Actual Polls
 3. Display Election Results 
 
-##Tech Stack:
+# Tech Stack:
 1. Azure Ethereum POA Consortium
 2. Truffle Suite
 3. Solidity for smart contracts
