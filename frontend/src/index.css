@@ -1,0 +1,32 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Montserrat', sans-serif;;
+}
+
+.searchBar > div{
+  width: 100%;
+  margin: 1em 0 1em 0;
+}
+
+.right.menu .ui.icon.input > input {
+  border: 0;
+  background-color: rgb(239, 243, 246);
+}
+
+.ui.compact.button {
+  background-color: rgb(239, 243, 246);
+}
+
+#overlay{
+  background-color: rgba(0, 0, 0, 0.34);
+}
