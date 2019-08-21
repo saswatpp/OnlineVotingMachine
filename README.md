@@ -31,7 +31,7 @@ The Election will have the following 3 major Process:
 3. The Voter can Vote any candidate and can even change his/her vote(once in 2 hours)
 4. They User and also View the live Turnout reports of any constituency
 
-#How Topaz-bot Works:
+# How Topaz-bot Works:
 Topaz-bot is consists of admin tools like initiating register candidates function, register constituency and change State of Election Function
 Admin Tools : 
 These can be Executed with Simple Post requests with User_id and Password as x-form data to the Topaz-bot host.
