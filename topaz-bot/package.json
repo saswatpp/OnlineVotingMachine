@@ -1,0 +1,15 @@
+{
+  "name": "topaz-bot",
+  "version": "0.1.0",
+  "private": true,
+  "entry-point": "index.js",
+  "dependencies": {
+    "@azure/cosmos": "^3.1.1",
+    "core-util-is": "^1.0.2",
+    "express": "^4.17.1",
+    "node-cron": "^2.0.3",
+    "truffle-contract": "^4.0.29",
+    "truffle-hdwallet-provider": "^1.0.6",
+    "web3": "^1.2.1"
+  }
+}
