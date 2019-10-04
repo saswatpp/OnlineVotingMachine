@@ -5,6 +5,8 @@ from flask_cors import cross_origin
 
 app = Flask(__name__)
 
+#connenction to databse
+#database name : votedata
 config = {
     'ENDPOINT': 'https://votedata.documents.azure.com:443/',
     'PRIMARYKEY': 'jHBJjbijjtPfOOmz5ZrIMUCWUFJQywY1MBQvwy7OenwHUHtzrYL6TzKgA3ZyLq9htTHqjiDzEnULL1Xd72QUIw==',
@@ -19,7 +21,7 @@ config = {
 client = cosmos_client.CosmosClient(url_connection=config['ENDPOINT'], auth={
                                     'masterKey': config['PRIMARYKEY']})
 
-# access container
+# access containers (total:4)
 database = Database(client, config['DATABASE'])
 container1 = database.get_container(config['CONTAINER1'])
 container2 = database.get_container(config['CONTAINER2'])
@@ -30,7 +32,7 @@ container4 = database.get_container(config['CONTAINER4'])
 @cross_origin()
 def user_info(aadhar):
 
-    # Query in SQL
+    # Query in SQL to get user info according to aadhar no.
     query = {'query': 'SELECT * FROM server s where s.AadharNo = "{}"'.format(aadhar)}
    
     options = {}
@@ -64,7 +66,7 @@ def graphs_stats():
 @cross_origin()
 def candidate_info(constituency):
     
-    # Query in SQL
+    # Query in SQL for candidate info according to constituencyID
     query = {'query': 'SELECT * FROM server s where s.ConstituencyID = "{}"'.format(constituency)}
    
     options = {}
@@ -81,7 +83,7 @@ def candidate_info(constituency):
 @cross_origin()
 def constituency_info(id):
     
-    # Query in SQL
+    # Query in SQL for constituency info
     query = {'query': 'SELECT * FROM server s where s.ConstituencyID = "{}"'.format(id)}
    
     options = {}
@@ -98,7 +100,7 @@ def constituency_info(id):
 @cross_origin()
 def constituency_all_info():
     
-    # Query in SQL
+    # Query in SQL for all the constituencies
     query = {'query': 'SELECT * FROM server s'}
    
     options = {}
@@ -111,6 +113,7 @@ def constituency_all_info():
     constituency_all_info= list(result_iterable)
     )
 
+# endpoint for casting votes
 @app.route("/vote/<aadhar>/<candidateid>", methods=['POST'])
 @cross_origin()
 def vote_cast(aadhar, candidateid):
